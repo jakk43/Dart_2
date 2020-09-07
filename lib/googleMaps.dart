@@ -1,8 +1,6 @@
 // AIzaSyC1p8pqMC6cdgz845HJkZy-e_8Yc9oY3LA
 // ignore: unused_import
 import 'dart:async';
-// ignore: unused_import
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -56,7 +54,7 @@ class MapSampleState extends State<MapSample> {
                   left: 10,
                   child: Container(
                     child: Icon(
-                      Icons.arrow_back_sharp,
+                      Icons.arrow_back,
                       size: 28,
                     ),
                   ),
