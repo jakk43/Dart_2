@@ -54,7 +54,7 @@ class MapSampleState extends State<MapSample> {
                   left: 10,
                   child: Container(
                     child: Icon(
-                      Icons.arrow_back_sharp,
+                      Icons.arrow_back,
                       size: 28,
                     ),
                   ),
