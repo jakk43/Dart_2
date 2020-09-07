@@ -1,5 +1,6 @@
 // AIzaSyC1p8pqMC6cdgz845HJkZy-e_8Yc9oY3LA
 import 'dart:async';
+import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -45,9 +46,31 @@ class MapSampleState extends State<MapSample> {
                   initialCameraPosition:
                       CameraPosition(target: currentLacation, zoom: 14.8),
                   myLocationEnabled: true,
-                  myLocationButtonEnabled: true,
-                  zoomControlsEnabled: true,
-                )
+                  myLocationButtonEnabled: false,
+                  zoomControlsEnabled: false,
+                ),
+                Positioned(
+                  top: 40,
+                  left: 10,
+                  child: Container(
+                    child: Icon(
+                      Icons.menu,
+                      size: 28,
+                    ),
+                  ),
+                ),
+                Positioned(
+                    bottom: 10,
+                    right: 10,
+                    child: FloatingActionButton(
+                      mini: true,
+                      onPressed: () {},
+                      backgroundColor: Colors.white,
+                      child: Icon(
+                        Icons.gps_fixed,
+                        color: Colors.black,
+                      ),
+                    )),
               ],
             ),
           )
