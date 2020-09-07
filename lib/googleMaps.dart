@@ -1,5 +1,7 @@
 // AIzaSyC1p8pqMC6cdgz845HJkZy-e_8Yc9oY3LA
+// ignore: unused_import
 import 'dart:async';
+// ignore: unused_import
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
@@ -54,7 +56,7 @@ class MapSampleState extends State<MapSample> {
                   left: 10,
                   child: Container(
                     child: Icon(
-                      Icons.menu,
+                      Icons.arrow_back_sharp,
                       size: 28,
                     ),
                   ),

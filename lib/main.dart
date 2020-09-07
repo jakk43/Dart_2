@@ -1,10 +1,8 @@
 import "package:flutter/material.dart";
 import 'googleMaps.dart';
-import 'home.dart';
+// ignore: unused_import
 import 'package:TaxiApp2/home.dart';
 import 'package:TaxiApp2/googleMaps.dart';
-import 'dart:io';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 void main() => runApp(MyApp());
 
