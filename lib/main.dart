@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import 'home.dart';
+import 'package:TaxiApp2/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -81,8 +83,7 @@ class _State extends State<LoginPage> {
                         // print(nameController.text);
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => SearchButton()),
+                          MaterialPageRoute(builder: (context) => myhome()),
                         );
                       },
                     )),
@@ -91,35 +92,15 @@ class _State extends State<LoginPage> {
   }
 }
 
-// ignore: must_be_immutable
-class SearchButton extends StatelessWidget {
-  TextEditingController nameController = TextEditingController();
+// ignore: camel_case_types
+class myhome extends StatelessWidget {
+  const myhome({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Takushi"),
-      ),
-      body: Center(
-          child: ListView(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(
-              padding: EdgeInsets.all(10),
-              child: TextField(
-                controller: nameController,
-                decoration: InputDecoration(
-                  //border: OutlineInputBorder(),
-
-                  labelText: 'Search',
-                  // icon: Icon(Icons.search),
-                ),
-              ),
-            ),
-          )
-        ],
-      )),
+    return MaterialApp(
+      home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
