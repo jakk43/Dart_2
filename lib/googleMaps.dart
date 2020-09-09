@@ -82,7 +82,60 @@ class MapSampleState extends State<MapSample> {
                     )),
               ],
             ),
-          )
+          ),
+          Expanded(
+              //แถบด้านล่าง
+              child: Column(
+            children: [
+              Container(
+                height: 54,
+                alignment: Alignment.center,
+                margin: const EdgeInsets.only(top: 17, right: 15, left: 15),
+                decoration: BoxDecoration(color: Colors.red[300]),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // RaisedButton(
+                    //   onPressed: () {},
+                    //   highlightElevation: 0,
+                    //   elevation: 0,
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.only(
+                    //         top: 13, bottom: 13, right: 40),
+                    //     child: Text("?????"),
+                    //   ),
+                    // ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                            top: 13, bottom: 13, right: 40),
+                        child: Text(
+                          " คุณตั้งใจจะไปไหน",
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 11),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(33)),
+                        child: OutlineButton.icon(
+                          onPressed: () {},
+                          icon: Icon(Icons.place),
+                          label: Text("ไปไหนดี"),
+                          shape: StadiumBorder(),
+                          borderSide: BorderSide(color: Colors.green),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ))
         ],
       ),
     );
