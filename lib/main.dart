@@ -1,8 +1,7 @@
+import 'package:TaxiApp2/googleMaps.dart';
 import "package:flutter/material.dart";
-import 'googleMaps.dart';
 // ignore: unused_import
 import 'package:TaxiApp2/home.dart';
-import 'package:TaxiApp2/googleMaps.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,70 +24,123 @@ class _State extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //backgroundColor: Color(0xff534535),
-        appBar: AppBar(
-          title: Center(child: Text('Taxi utcc')),
-        ),
+        backgroundColor: Color(0xff5861ae),
+        // appBar: AppBar(
+        //   title: Center(child: Text('TAKUSHI')),
+        // ),
         body: Padding(
             padding: EdgeInsets.all(10),
+            //   padding: EdgeInsets.only(left: 50, right: 50),
             child: ListView(
               children: <Widget>[
-                Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      'WELCOME !',
-                      style: TextStyle(
-                          color: Colors.purple,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 30),
-                    )),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: Column(
+                    children: [
+                      Container(
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.all(10),
+                          margin: EdgeInsets.all(20),
+                          width: 250,
+                          height: 250,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                      'https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://www.care-nation.com/wp-content/uploads/2018/09/social-instagram-new-circle-512.png'),
+                                  fit: BoxFit.fill))),
+                    ],
+                  ),
+                ),
                 Container(
                   alignment: Alignment.center,
                   padding: EdgeInsets.all(5),
                 ),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(
-                    controller: nameController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Student id',
+
+                // SizedBox(height: 100.0),
+                Padding(
+                  padding: const EdgeInsets.only(top: 90, left: 70, right: 70),
+                  child: MaterialButton(
+                    height: 60,
+                    minWidth: 300,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(40)),
+                    onPressed: () {},
+                    child: Text(
+                      "ลงทะเบียน",
+                      style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.black,
+                      ),
                     ),
+                    color: Colors.white,
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                  child: TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Password',
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 70, right: 70),
+                  child: MaterialButton(
+                    height: 60,
+                    minWidth: 300,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(40)),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MapSample()));
+                    },
+                    child: Text(
+                      "เข้าสู่ระบบ",
+                      style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.black,
+                      ),
                     ),
+                    color: Colors.white,
                   ),
                 ),
-                FlatButton(
-                  onPressed: () {
-                    //forgot password screen
-                  },
-                  textColor: Colors.purple,
-                  child: Text('Forgot Password'),
-                ),
-                Container(
-                    height: 50,
-                    padding: EdgeInsets.fromLTRB(150, 0, 150, 0),
-                    child: RaisedButton(
-                      textColor: Colors.white,
-                      color: Colors.purple,
-                      child: Text('Login'),
-                      onPressed: () {
-                        // print(nameController.text);
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => myhome()),
-                        );
-                      },
-                    )),
+
+                // Container(
+                //   padding: EdgeInsets.all(10),
+                //   // child: TextField(
+                //   //     // controller: nameController,
+                //   //     // decoration: InputDecoration(
+                //   //     //   border: OutlineInputBorder(),
+                //   //     //   labelText: 'Student id',
+                //   //     // ),
+                //   //     ),
+                // ),
+
+                // Container(
+                //   padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                //   child: TextField(
+                //     obscureText: true,
+                //     decoration: InputDecoration(
+                //       border: OutlineInputBorder(),
+                //       labelText: 'Password',
+                //     ),
+                //   ),
+                // ),
+                // FlatButton(
+                //   onPressed: () {
+                //     //forgot password screen
+                //   },
+                //   textColor: Colors.purple,
+                //   child: Text('Forgot Password'),
+                // ),
+                // Container(
+                //     height: 50,
+                //     padding: EdgeInsets.fromLTRB(70, 0, 70, 0),
+                //     child: RaisedButton(
+                //       textColor: Colors.white,
+                //       color: Colors.purple,
+                //       child: Text('Login'),
+                //       onPressed: () {
+                //         // print(nameController.text);
+                //         Navigator.push(
+                //           context,
+                //           MaterialPageRoute(builder: (context) => myhome()),
+                //         );
+                //       },
+                //     )),
               ],
             )));
   }
@@ -102,7 +154,7 @@ class myhome extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //home: MyHomePage(),
-      home: MapSample(),
+      home: MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
