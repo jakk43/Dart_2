@@ -1,12 +1,13 @@
 // AIzaSyC1p8pqMC6cdgz845HJkZy-e_8Yc9oY3LA
 // ignore: unused_import
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart';
 // ignore: unused_import
 import 'package:geolocator/geolocator.dart';
+
+import 'main.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -41,7 +42,7 @@ class MapSampleState extends State<MapSample> {
           Expanded(
             flex: 3,
             child: Stack(
-              children: [
+              children: <Widget>[
                 GoogleMap(
                   initialCameraPosition:
                       CameraPosition(target: currentLacation, zoom: 14.8),
@@ -53,11 +54,19 @@ class MapSampleState extends State<MapSample> {
                   top: 40,
                   left: 10,
                   child: Container(
-                    child: Icon(
-                      Icons.arrow_back,
-                      size: 28,
-                    ),
-                  ),
+                      child: new IconButton(
+                          icon: new Icon(Icons.arrow_back),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => myhome()));
+                          })
+
+                      // child: Icon(
+                      //   Icons.arrow_back,
+                      //   size: 28,
+                      ),
                 ),
                 Positioned(
                     bottom: 10,

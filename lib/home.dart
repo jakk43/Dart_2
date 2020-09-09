@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'googleMaps.dart';
+
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -13,6 +15,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: [
           SizedBox(height: 25.0),
+          new IconButton(
+              icon: new Icon(Icons.next_week),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MapSample()));
+              }),
           Padding(
             padding: EdgeInsets.only(top: 15.0, left: 40.0),
             child: Row(
@@ -59,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               ],
             ),
-          )
+          ),
         ],
       ),
     );

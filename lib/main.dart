@@ -1,4 +1,3 @@
-import 'package:TaxiApp2/googleMaps.dart';
 import "package:flutter/material.dart";
 // ignore: unused_import
 import 'package:TaxiApp2/home.dart';
@@ -85,7 +84,7 @@ class _State extends State<LoginPage> {
                         borderRadius: new BorderRadius.circular(40)),
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => MapSample()));
+                          MaterialPageRoute(builder: (context) => myhome()));
                     },
                     child: Text(
                       "เข้าสู่ระบบ",
@@ -97,50 +96,6 @@ class _State extends State<LoginPage> {
                     color: Colors.white,
                   ),
                 ),
-
-                // Container(
-                //   padding: EdgeInsets.all(10),
-                //   // child: TextField(
-                //   //     // controller: nameController,
-                //   //     // decoration: InputDecoration(
-                //   //     //   border: OutlineInputBorder(),
-                //   //     //   labelText: 'Student id',
-                //   //     // ),
-                //   //     ),
-                // ),
-
-                // Container(
-                //   padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                //   child: TextField(
-                //     obscureText: true,
-                //     decoration: InputDecoration(
-                //       border: OutlineInputBorder(),
-                //       labelText: 'Password',
-                //     ),
-                //   ),
-                // ),
-                // FlatButton(
-                //   onPressed: () {
-                //     //forgot password screen
-                //   },
-                //   textColor: Colors.purple,
-                //   child: Text('Forgot Password'),
-                // ),
-                // Container(
-                //     height: 50,
-                //     padding: EdgeInsets.fromLTRB(70, 0, 70, 0),
-                //     child: RaisedButton(
-                //       textColor: Colors.white,
-                //       color: Colors.purple,
-                //       child: Text('Login'),
-                //       onPressed: () {
-                //         // print(nameController.text);
-                //         Navigator.push(
-                //           context,
-                //           MaterialPageRoute(builder: (context) => myhome()),
-                //         );
-                //       },
-                //     )),
               ],
             )));
   }
