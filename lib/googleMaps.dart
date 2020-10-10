@@ -1,6 +1,6 @@
 // AIzaSyC1p8pqMC6cdgz845HJkZy-e_8Yc9oY3LA
 // ignore: unused_import
-import 'dart:async';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart';
@@ -83,68 +83,71 @@ class MapSampleState extends State<MapSample> {
               ],
             ),
           ),
-          Expanded(
-              //แถบด้านล่าง
-              child: Column(
-            children: [
-              Container(
-                height: 30,
-                alignment: Alignment.topLeft,
-                margin: const EdgeInsets.only(top: 10, right: 15, left: 15),
-                //decoration: BoxDecoration(color: Colors.red[300]),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20),
+            child: Container(
+                //แถบด้านล่าง
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      child: Padding(
-                        padding: const EdgeInsets.only(),
-                        child: Text(
-                          " คุณตั้งใจจะไปไหน???",
-                          style: TextStyle(fontSize: 18),
+              children: [
+                Container(
+                  height: 30,
+                  alignment: Alignment.topLeft,
+                  margin: const EdgeInsets.only(top: 10, right: 15, left: 15),
+                  //decoration: BoxDecoration(color: Colors.red[300]),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(),
+                          child: Text(
+                            " คุณตั้งใจจะไปไหน?",
+                            style: TextStyle(fontSize: 18),
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: TextField(
-                  decoration: InputDecoration(
-                    icon: Container(
-                      width: 10,
-                      height: 10,
-                      child: Icon(
-                        Icons.radio_button_checked,
-                        color: Colors.black,
-                      ),
-                    ),
-                    hintText: "ตำแหน่องปัจจุบันของคุณ",
-                    border: InputBorder.none,
-                    contentPadding: EdgeInsets.only(left: 8.0, top: 16.0),
+                    ],
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: TextField(
-                  decoration: InputDecoration(
-                    icon: Container(
-                      width: 10,
-                      height: 10,
-                      child: Icon(
-                        Icons.place_outlined,
-                        color: Colors.black,
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      icon: Container(
+                        width: 10,
+                        height: 10,
+                        child: Icon(
+                          Icons.radio_button_checked,
+                          color: Colors.black,
+                        ),
                       ),
+                      hintText: "ตำแหน่องปัจจุบันของคุณ",
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.only(left: 8.0, top: 16.0),
                     ),
-                    hintText: "จุดหมายปลายทาง",
-                    border: InputBorder.none,
-                    contentPadding: EdgeInsets.only(left: 8.0, top: 16.0),
                   ),
                 ),
-              ),
-            ],
-          ))
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      icon: Container(
+                        width: 10,
+                        height: 10,
+                        child: Icon(
+                          Icons.place_outlined,
+                          color: Colors.black,
+                        ),
+                      ),
+                      hintText: "จุดหมายปลายทาง",
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.only(left: 8.0, top: 16.0),
+                    ),
+                  ),
+                ),
+              ],
+            )),
+          )
         ],
       ),
     );

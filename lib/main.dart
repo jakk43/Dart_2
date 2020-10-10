@@ -1,6 +1,9 @@
 import "package:flutter/material.dart";
 // ignore: unused_import
 import 'package:TaxiApp2/home.dart';
+import 'dart:ui';
+
+import 'googleMaps.dart';
 
 void main() => runApp(MyApp());
 
@@ -109,7 +112,7 @@ class myhome extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //home: MyHomePage(),
-      home: MyHomePage(),
+      home: MapSample(),
       debugShowCheckedModeBanner: false,
     );
   }
