@@ -54,19 +54,19 @@ class MapSampleState extends State<MapSample> {
                   top: 40,
                   left: 10,
                   child: Container(
-                      child: new IconButton(
-                          icon: new Icon(Icons.arrow_back),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => myhome()));
-                          })
+                    child: new IconButton(
+                        icon: new Icon(Icons.arrow_back),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => myhome()));
+                        }),
 
-                      // child: Icon(
-                      //   Icons.arrow_back,
-                      //   size: 28,
-                      ),
+                    // child: Icon(
+                    //   Icons.arrow_back,
+                    //   size: 28,
+                  ),
                 ),
                 Positioned(
                     bottom: 10,
@@ -88,50 +88,59 @@ class MapSampleState extends State<MapSample> {
               child: Column(
             children: [
               Container(
-                height: 54,
-                alignment: Alignment.center,
-                margin: const EdgeInsets.only(top: 17, right: 15, left: 15),
-                decoration: BoxDecoration(color: Colors.red[300]),
-                child: Row(
+                height: 30,
+                alignment: Alignment.topLeft,
+                margin: const EdgeInsets.only(top: 10, right: 15, left: 15),
+                //decoration: BoxDecoration(color: Colors.red[300]),
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // RaisedButton(
-                    //   onPressed: () {},
-                    //   highlightElevation: 0,
-                    //   elevation: 0,
-                    //   child: Padding(
-                    //     padding: const EdgeInsets.only(
-                    //         top: 13, bottom: 13, right: 40),
-                    //     child: Text("?????"),
-                    //   ),
-                    // ),
                     Container(
                       child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 13, bottom: 13, right: 40),
+                        padding: const EdgeInsets.only(),
                         child: Text(
-                          " คุณตั้งใจจะไปไหน",
+                          " คุณตั้งใจจะไปไหน???",
                           style: TextStyle(fontSize: 18),
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 11),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(33)),
-                        child: OutlineButton.icon(
-                          onPressed: () {},
-                          icon: Icon(Icons.place),
-                          label: Text("ไปไหนดี"),
-                          shape: StadiumBorder(),
-                          borderSide: BorderSide(color: Colors.green),
-                        ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    icon: Container(
+                      width: 10,
+                      height: 10,
+                      child: Icon(
+                        Icons.radio_button_checked,
+                        color: Colors.black,
                       ),
                     ),
-                  ],
+                    hintText: "ตำแหน่องปัจจุบันของคุณ",
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.only(left: 8.0, top: 16.0),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    icon: Container(
+                      width: 10,
+                      height: 10,
+                      child: Icon(
+                        Icons.place_outlined,
+                        color: Colors.black,
+                      ),
+                    ),
+                    hintText: "จุดหมายปลายทาง",
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.only(left: 8.0, top: 16.0),
+                  ),
                 ),
               ),
             ],
